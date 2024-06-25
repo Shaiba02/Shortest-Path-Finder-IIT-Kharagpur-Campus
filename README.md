@@ -6,7 +6,7 @@ The algorithm is optimized by using dynamic programming technique memoization to
 <br>
 When the user chooses to enter source and destination, Floyd-Warshall algorithm is applied and it generates the minimum distances for every pair of locations. When the user now enters source and destination, along with the minimum distance between the given source and destination, the shortest path to be taken in order to achieve the minimum distance is also displayed.
 # Location Node Number
-Node number                                        Location
+    Node number                                        Location
 
     1                                              Main Building
     2                                              SN/IG Hall
