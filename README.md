@@ -33,7 +33,7 @@ When the user chooses to enter source and destination, Floyd-Warshall algorithm 
     23                                             SNVH Hall
     24                                             Technology Guest House
     25                                             Director's Bunglow
-    26                                             B C Roy Bunglow
+    26                                             B C Roy Hospital
     27                                             Technology Market
     28                                             Tikka/Clock Tower
     39                                             Tata Steel Complex
