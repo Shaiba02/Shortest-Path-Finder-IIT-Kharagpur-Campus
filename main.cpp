@@ -64,7 +64,6 @@ int main(){
     //find minimum distance and path from source to destination
     double minDist = findPath(source_node, destination_node, dist, parent, mpp, nodes_name, path);
 
-
     //printing minimum distance and path from source to destination
     cout<<endl<<"Minimum distance from "<<source_node<<" to "<<destination_node<<" is "<<minDist<<" km "<<endl<<endl;
     cout<<"Best Path is: "<<endl;
@@ -73,23 +72,8 @@ int main(){
         else cout<<path[i]<<endl<<endl;
     }
 
-
-    /*
-    for(int i=1;i<31;i++){
-        for(int j=1; j<31;j++){
-            cout<<dist[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    for(int i=1;i<31;i++){
-        for(int j=1; j<31;j++){
-            cout<<parent[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    */
-    
 }
+
 
 // All the functions used are below: 
 void openFile(ifstream &inFile, string file_name){
@@ -98,7 +82,6 @@ void openFile(ifstream &inFile, string file_name){
         cout<<"Error! Failed to open file" <<endl;
         exit(-1);
     }
-    //else cout<<"File opened";
 }
 
 void processFile(ifstream &inFile_graph, ifstream &inFile_nodes, vector<vector<double>> &graph, 
@@ -182,7 +165,6 @@ void choose_src_dest(vector<vector<double>> dist, vector<vector<double>> parent,
     unordered_map<string, int> &mpp, string &source_node, string &destination_node){
     for(auto it: mpp) cout<<it.first<<endl;
     cout<<endl;
-    //string source_node, destination_node;
     while(true){
         cout<<"Enter source: "; 
         getline(cin, source_node);
@@ -192,14 +174,11 @@ void choose_src_dest(vector<vector<double>> dist, vector<vector<double>> parent,
         transform(destination_node.begin(), destination_node.end(), destination_node.begin(), ::toupper);
         if(mpp.find(source_node)==mpp.end() || mpp.find(destination_node)==mpp.end()){
             cout<<"Invalid! Please choose from the List"<<endl<<endl;
-            //source_node.clear(); destination_node.clear();
         }
         else if(source_node==destination_node){
             cout<<"Source and destination cannot be the same. Please choose again "<<endl<<endl;
-            //source_node.clear(); destination_node.clear();
         }
         else {
-            //cout<<source_node<<" "<<destination_node<<endl;
             break;
         }
     }
