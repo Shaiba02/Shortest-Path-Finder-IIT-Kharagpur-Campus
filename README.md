@@ -42,4 +42,4 @@ The frontend is built with React, providing an interactive UI and user input for
     30                                             Tagore Open Air Theater
 
 
-<img src="Images\IIT KGP Campus Graph representation.png" alt="IIT KGP Campus Map-Graph Representation" width="200"/>
+<img src="Images\IIT KGP Campus Graph representation.png" alt="IIT KGP Campus Map-Graph Representation" width="500"/>
