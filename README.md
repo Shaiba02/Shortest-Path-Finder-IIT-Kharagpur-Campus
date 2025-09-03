@@ -40,3 +40,5 @@ The frontend is built with React, providing an interactive UI and user input for
     28                                             Tikka/Clock Tower
     39                                             Tata Steel Complex
     30                                             Tagore Open Air Theater
+
+![IIT KGP Campus Map-Graph Representaion]IIT KGP Campus Graph representation.png
