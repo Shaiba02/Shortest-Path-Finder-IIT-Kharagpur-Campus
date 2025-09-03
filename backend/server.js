@@ -1,10 +1,11 @@
+const cors=require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 
 const app = express();
 app.use(bodyParser.json());
-
+app.use(cors());
 const data = JSON.parse(fs.readFileSync("appsettings.json", "utf8"));
 const n = data.places.length + 1;
 
@@ -80,9 +81,10 @@ function findPath(src, dest) {
 }
 
 // ---- Step 5: API Endpoint ----
-app.post("/getPath", (req, res) => {
-  const { source, destination } = req.body;
+app.get("/getPath", (req, res) => {
+  const { source, destination } = req.query;
   const result = findPath(source, destination);
+  //console.log(result);
   res.json(result);
 });
 

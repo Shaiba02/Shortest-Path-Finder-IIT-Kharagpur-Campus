@@ -69,9 +69,10 @@ function App() {
   const fetchPath = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/path?source=${source}&destination=${destination}`
+        `http://localhost:5000/getPath?source=${source}&destination=${destination}`
       );
       const data = await response.json();
+      //console.log(data);
       setResult(data);
     } catch (error) {
       console.error("Error fetching path:", error);
@@ -99,7 +100,7 @@ function App() {
         <div style={{ marginTop: "20px" }}>
           <h2>Shortest Path</h2>
           <p>Path: {result.path.join(" → ")}</p>
-          <p>Distance: {result.distance}</p>
+          <p>Distance: {Number(result.distance).toFixed(2)} km</p>
         </div>
       )}
     </div>
